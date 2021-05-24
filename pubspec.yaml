@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_form_builder: ^5.0.0-alpha.1
-  phone_number: ^0.9.0
+  flutter_form_builder: ^6.0.1
+  phone_number: ^0.11.0
   country_pickers: ^2.0.0
 
 dev_dependencies:
