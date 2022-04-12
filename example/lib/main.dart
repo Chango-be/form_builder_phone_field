@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_phone_field/form_builder_phone_field.dart';
+import 'package:form_builder_validators/form_builder_validators.dart';
 
 void main() {
   runApp(MyApp());
@@ -45,8 +46,8 @@ class MyHomePage extends StatelessWidget {
                 // onChanged: _onChanged,
                 priorityListByIsoCode: ['KE'],
                 validator: FormBuilderValidators.compose([
-                  FormBuilderValidators.numeric(context),
-                  FormBuilderValidators.required(context),
+                  FormBuilderValidators.numeric(),
+                  FormBuilderValidators.required(),
                 ]),
               ),
               const SizedBox(height: 15),

@@ -3,7 +3,6 @@ import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:phone_number/phone_number.dart';
 
@@ -61,7 +60,7 @@ class FormBuilderPhoneField extends FormBuilderField<String> {
     String? initialValue,
     InputDecoration decoration = const InputDecoration(),
     ValueChanged<String?>? onChanged,
-    ValueTransformer<String>? valueTransformer,
+    ValueTransformer<String?>? valueTransformer,
     bool enabled = true,
     FormFieldSetter<String>? onSaved,
     AutovalidateMode autovalidateMode = AutovalidateMode.disabled,
@@ -272,7 +271,7 @@ class _FormBuilderPhoneFieldState
         return CountryPickerCupertino(
           pickerSheetHeight: widget.cupertinoPickerSheetHeight ?? 300.0,
           onValuePicked: (Country country) {
-            effectiveFocusNode!.requestFocus();
+            effectiveFocusNode.requestFocus();
             setState(() => _selectedDialogCountry = country);
             didChange(fullNumber);
           },
