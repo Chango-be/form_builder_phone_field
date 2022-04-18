@@ -167,6 +167,8 @@ class FormBuilderPhoneField extends FormBuilderField<String> {
                         errorBorder: InputBorder.none,
                         hintText: decoration.hintText,
                         hintStyle: decoration.hintStyle,
+                        errorText: state.errorText,
+                        errorStyle: decoration.errorStyle,
                       ),
                       onChanged: (val) {
                         state.invokeChange();
